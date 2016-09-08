@@ -9,13 +9,13 @@ public class Exerc6{
 		
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Digite o N-esimo termo da serie 1, 4, 9, 16...\n");
+		System.out.println("Digite o N-esimo termo da serie 1, 4, 9, 16...");
 		int a = input.nextInt();
 		
-		int c=1;
+		int c=0;
 		int soma=0,mult=0;
 		
-		while(c<=a){
+		while(c<=a-1){
 			imprimiSerie(serie(a,c), a);
 			soma = somaPares(serie(a,c),a);
 			mult = multImpares(serie(a,c),a);
@@ -26,15 +26,17 @@ public class Exerc6{
 	}
 	static int serie(int param, int pos){
 		int[] ser = new int[param];
-		int n=1;
-		while(n<=param){
-			ser[n] = n*n;
+		int n=0;
+		while(n<=param-1){
+			if(n==0)
+				ser[0]=1;
+			else
+				ser[n] = (n+1)*(n+1);
 			n++;
 		}
 		return ser[pos];
 	}
 	static int somaPares(int serie, int param){
-		int b=1;
 		int seriePares=0;
 		if(serie%2==0){
 			seriePares+=seriePares;
@@ -43,18 +45,17 @@ public class Exerc6{
 		return seriePares;
 	}
 	static int multImpares(int serie, int param){
-		int b=1;
 		int serieImpares=0;
 		if(!(serie%2==0)){
-			serieImpares+=serieImpares;
+			serieImpares*=serieImpares;
 			serieImpares = serie;
 		}
 		return serieImpares;
 	}
 	static void imprimiSerie(int serie, int param){
-		int b=1;
-		if(b==param)
-			System.out.print(serie+".");
+		int b=0;
+		if(b==param-1)
+			System.out.print(serie+".\n");
 			
 		System.out.print(serie+",");
 		b++;
