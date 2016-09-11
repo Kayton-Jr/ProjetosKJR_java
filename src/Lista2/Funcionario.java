@@ -2,9 +2,10 @@ package Lista2;
 
 public class Funcionario {
     
-    private String nome, depto, data; 
+    private String nome, depto; 
     private double sal;
     private int rg;
+    private Data dtadm;
     
     void recebeAumento(int porcentagem){
         sal = sal + (sal * porcentagem/100);
@@ -37,15 +38,15 @@ public class Funcionario {
         this.depto = depto;
     }
 
-    public String getData() {
-        return data;
-    }
+    public Data getDtadm() {
+		return dtadm;
+	}
 
-    public void setData(String data) {
-        this.data = data;
-    }
+	public void setDtadm(Data dtadm) {
+		this.dtadm = dtadm;
+	}
 
-    public double getSal() {
+	public double getSal() {
         return sal;
     }
 
