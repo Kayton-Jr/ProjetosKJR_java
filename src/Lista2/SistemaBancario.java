@@ -17,11 +17,20 @@ public class SistemaBancario {
 	    Scanner input = new Scanner(System.in);
 	    
 	    //Criando os objetos c1 e c2 do tipo Conta
-	    Conta c1 = new Conta(1, 1, "Paulo");
-	    Conta c2 = new Conta(2);
+	    Conta c1 = new Conta(1, 1, "Paulo", 2500, 500);
+	    Conta c2 = new Conta(2, 1, "Klayton", 1500, 500);
 	    
-	    // Imprimindo o tipo da conta c1 e o tipo da conta c2
-	    System.out.println(c1.obterTipo());
-	    System.out.println(c2.obterTipo());
-    }    
+	    System.out.println("****Antes da transferencia*****");
+	    c1.imprimirDados();
+	    System.out.println("\n\n");
+	    c2.imprimirDados();
+
+	    System.out.println("\n\n\n");	    
+
+	    c1.transferencia(c1, c2, 300, input);
+	    
+	    System.out.println("****Depois da transferencia*****");
+	    c1.imprimirDados();
+	    c2.imprimirDados();
+    }
 }

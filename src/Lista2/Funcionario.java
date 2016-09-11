@@ -2,10 +2,9 @@ package Lista2;
 
 public class Funcionario {
     
-    private String nome, depto; 
+    private String nome, depto, data; 
     private double sal;
     private int rg;
-    private Data dtadm;
     
     void recebeAumento(int porcentagem){
         sal = sal + (sal * porcentagem/100);
@@ -20,6 +19,7 @@ public class Funcionario {
         System.out.println("Depto: " +depto);
         System.out.println("Salario: " +sal);
         System.out.println("RG: " +rg);
+        System.out.println("Data de admissao: "+data);
     }
 
     public String getNome() {
@@ -38,12 +38,12 @@ public class Funcionario {
         this.depto = depto;
     }
 
-    public Data getDtadm() {
-		return dtadm;
+    public String getData() {
+		return data;
 	}
 
-	public void setDtadm(Data dtadm) {
-		this.dtadm = dtadm;
+	public void setData(String data) {
+		this.data = data;
 	}
 
 	public double getSal() {

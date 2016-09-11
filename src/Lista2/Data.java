@@ -1,19 +1,9 @@
 package Lista2;
 
-import java.util.Date;
-
 public class Data{
 	
 	private int dia, mes, ano;
 	
-	
-//	public void setDia(int tDia){
-//		this.dia = verifDia(tDia);
-//	}
-//	
-//	public int getDia(){
-//		return this.dia;
-//	}
 	public Data(int tDia, int tMes, int tAno){
 		
 		this.mes = verifMes(tMes);
@@ -46,7 +36,7 @@ public class Data{
 		System.out.println("Dia do mes invalido ("+testeDia+"), \nSelecionado 1");
 		return 1;
 	}
-	public String toString(){
+	public String getData(){
 		return String.format("%d/%d/%d", this.dia, this.mes, this.ano);
 	}
 }
