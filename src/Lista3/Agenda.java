@@ -1,4 +1,4 @@
-package Lista2;
+package Lista3;
 
 public class Agenda {
 	
