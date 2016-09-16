@@ -18,48 +18,48 @@ public class Conta {
 	     this.limite = limite;
 	 }
 	 //Método sacar
-	 void sacar(int valor) {
+	 public void sacar(double valor) {
 		 if(valor + limite < saldo)
 			 System.out.println("Saldo insuficiente ("+saldo+")");
 	     saldo = saldo - valor;
 	 }
 
 	 //Método depositar
-	 void depositar(int valor) {
+	 public void depositar(double valor) {
 	     saldo = saldo + valor;
 	 }
 
 	 //método imprimir o dono da conta
-	 void imprimirDono() {
+	 public void imprimirDono() {
 	     System.out.println("Dono: " + nome);
 	 }
 
 	 //método obter o saldo da conta
-	 double getSaldo() {
+	 public double getSaldo() {
 	     return saldo;
 	 }
-	 void setSaldo(double valor) {
+	 public void setSaldo(double valor) {
 		 saldo = valor;
 	 }
 
 	 //método obter o tipo da conta
-	 int getTipo() {
+	 public int getTipo() {
 	     return tipo;
 	 }
-	 double getLimite() {
+	 public double getLimite() {
 		 return limite;
 	 }
-	 String getNome() {
+	 public String getNome() {
 		 return nome;
 	 }
-	 void imprimirDados(){
+	 public void imprimirDados(){
 		 System.out.println("Nome: "+nome);
 		 System.out.println("Tipo da conta: "+tipo);
 		 System.out.println("Numero da conta: "+num);
 		 System.out.println("Saldo: "+saldo);
 		 System.out.println("Limite: "+limite);
 	 }
-	 void transferencia(Conta ret, Conta rec, double qtd, Scanner input){
+	 public void transferencia(Conta ret, Conta rec, double qtd, Scanner input){
 		 if(ret.getSaldo() + ret.getLimite() < qtd)
 			 System.out.println("Saldo insuficiente ("+ret.getSaldo()+")");
 		 else {
