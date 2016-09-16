@@ -7,6 +7,8 @@ public class TesteFuncionario {
 	public static void main(String[] args) {
 
 		Funcionario f1 = new Funcionario();
+		Gerente chefe = new Gerente(123, 2, "Klayton", "camisas", "01/10/2015",
+				4000.00, 5839167);
 
 		Scanner input = new Scanner(System.in);
 
@@ -59,6 +61,8 @@ public class TesteFuncionario {
 		
 		System.out.print("Ganho Anual: ");
 		f1.imprimirFuncionario();
+		System.out.println("\n *** Dados do Gerente ***\n");
+		chefe.imprimir();
 		
 	}
 }

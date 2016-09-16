@@ -6,15 +6,15 @@ public class Funcionario {
     private double sal;
     private int rg;
     
-    void recebeAumento(int porcentagem){
+    public void recebeAumento(int porcentagem){
         sal = sal + (sal * porcentagem/100);
     }
     
-    double calculaGanhoAnual(){
+    public double calculaGanhoAnual(){
         return (sal * 12);
     }
     
-    void imprimirFuncionario(){
+    public void imprimirFuncionario(){
         System.out.println("Nome: " +nome);
         System.out.println("Depto: " +depto);
         System.out.println("Salario: " +sal);
