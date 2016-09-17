@@ -21,7 +21,7 @@ public class Agenda {
 			pessoas[i] = pessoa;
 			i++;
 		}else
-			System.out.println("Espaço insuficiente!!");		
+			System.out.println("Espaço insuficiente!!"); 		
 	}
 	public void removerPessoa(Pessoa pessoa) {
 		 int posRem = buscarPessoa(pessoa);
