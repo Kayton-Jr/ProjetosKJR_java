@@ -1,12 +1,12 @@
 package Lista3;
 
-public class ContaPoupança extends Conta{
+public class ContaPoupanÃ§a extends Conta{
 	
 	private int diaRend;
 	private double txRend;//valor em decimal
 	
 	
-	public ContaPoupança(int num, int tipoParam,	String nomeParam, double saldo, double limite, double txRend, int diaRend){
+	public ContaPoupanÃ§a(int num, int tipoParam,	String nomeParam, double saldo, double limite, double txRend, int diaRend){
 		super(num, tipoParam, nomeParam, saldo, limite);
 		this.txRend = txRend;
 		this.diaRend = diaRend;

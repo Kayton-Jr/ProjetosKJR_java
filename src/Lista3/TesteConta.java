@@ -7,7 +7,7 @@ public class TesteConta{
 	public static void main(String[] args){
 		
 		Conta conta = new Conta(12, 1, "Klayton", 1500.00, 1200.00);
-		ContaPoupança contaPoup = new ContaPoupança(123, 2, "KlaytonP", 1400.00, 0, 0.05, 25);
+		ContaPoupanÃ§a contaPoup = new ContaPoupanÃ§a(123, 2, "KlaytonP", 1400.00, 0, 0.05, 25);
 		ContaEspecial contaEsp = new ContaEspecial(1234, 3, "KlaytonE", 800.00, 600);
 		
 		System.out.println("***** Valor do saldo inicial *****");
