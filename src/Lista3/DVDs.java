@@ -21,8 +21,8 @@ public class DVDs extends Produto{
 	
 	@Override
 	public String toString() {
-		return "\nNome do livro: "+ super.getNomeProd() +
-				"\nNome do autor: "+getDuracao()+"\n"; 
+		return "\nNome do DVD: "+ super.getNomeProd() +
+				"\nDuracao do DVD: "+getDuracao()+"\n"; 
 	}
 	
 	public void imprimir() {

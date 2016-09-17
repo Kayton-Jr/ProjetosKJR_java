@@ -23,10 +23,10 @@ public class Produto{
 		this.precoProd = precoProd;
 	}
 	
-	public void carrinho(int qtd, Livros[] qtdL, DVDs[] qtdD, CDs[] qtdC){
-		System.out.println(Livros[].class.toString());
-		System.out.println(DVDs[].class.toString());
-		System.out.println(CDs[].class.toString());
-
-	}
+//	public void carrinho(int qtd, Livros[] qtdL, DVDs[] qtdD, CDs[] qtdC){
+//		System.out.println(Livros[].class.toString());
+//		System.out.println(DVDs[].class.toString());
+//		System.out.println(CDs[].class.toString());
+//
+//	}
 }

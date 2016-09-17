@@ -21,8 +21,8 @@ public class CDs extends Produto{
 	
 	@Override
 	public String toString() {
-		return "\nNome do livro: "+ super.getNomeProd() +
-				"\nNome do autor: "+getNumFaixas()+"\n"; 
+		return "\nNome do CD: "+ super.getNomeProd() +
+				"\nNumero de faixas do CD: "+getNumFaixas()+"\n"; 
 	}
 	
 	public void imprimir() {
