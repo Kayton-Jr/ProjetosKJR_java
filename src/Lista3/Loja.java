@@ -10,7 +10,7 @@ public class Loja{
 		int i =0;
 		boolean igual = true;
 		int j = 0;
-		int comp1=1, comp2=0;
+		int comp1=0, comp2=0;
 		
 		Livros livro1 = new Livros("Casal Deitel", "Java - Como programar", "12345");
 		todosProd.add(livro1);
@@ -46,7 +46,7 @@ public class Loja{
 		i=0;
 		while(i<todosProd.size()){
 			if(i!=j){
-				if(comp1!=comp2){
+				if(i!=comp2 && j!=comp1){
 					if(todosProd.get(i).verifCodBar(todosProd.get(i).getCodBarras(), todosProd.get(j).getCodBarras())){
 						System.out.println(todosProd.get(i).getNomeProd()+"\n"
 								+ todosProd.get(j).getNomeProd()+"\n\n");
