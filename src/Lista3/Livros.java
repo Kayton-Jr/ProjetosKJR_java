@@ -5,10 +5,11 @@ public class Livros extends Produto{
 	
 	private String autor;
 	
-	public Livros(String autor, String nome){
+	public Livros(String autor, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
 		this.autor = autor;
+		super.setCodBarras(numCod);
 	}
 
 	public String getAutor() {
@@ -22,7 +23,8 @@ public class Livros extends Produto{
 	@Override
 	public String toString() {
 		return "\nNome do livro: "+ super.getNomeProd() +
-				"\nNome do autor: "+getAutor()+"\n"; 
+				"\nNome do autor: "+getAutor()+"\n"
+				+ "Codigo de barras: "+super.getCodBarras()+"\n";  
 	}
 	
 	public void imprimir() {

@@ -5,10 +5,11 @@ public class DVDs extends Produto{
 	
 	private float duracao;
 	
-	public DVDs(float dur, String nome){
+	public DVDs(float dur, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
 		this.duracao = dur;
+		super.setCodBarras(numCod);
 	}
 
 	public float getDuracao() {
@@ -22,7 +23,8 @@ public class DVDs extends Produto{
 	@Override
 	public String toString() {
 		return "\nNome do DVD: "+ super.getNomeProd() +
-				"\nDuracao do DVD: "+getDuracao()+"\n"; 
+				"\nDuracao do DVD: "+getDuracao()+"\n"
+				+ "Codigo de barras: "+super.getCodBarras()+"\n";  
 	}
 	
 	public void imprimir() {

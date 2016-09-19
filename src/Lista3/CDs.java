@@ -5,10 +5,11 @@ public class CDs extends Produto{
 	
 	private int numFaixas;
 	
-	public CDs(int numFaixas, String nome){
+	public CDs(int numFaixas, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
-		this.numFaixas = numFaixas;		
+		this.numFaixas = numFaixas;
+		super.setCodBarras(numCod);
 	}
 
 	public int getNumFaixas() {
@@ -22,7 +23,8 @@ public class CDs extends Produto{
 	@Override
 	public String toString() {
 		return "\nNome do CD: "+ super.getNomeProd() +
-				"\nNumero de faixas do CD: "+getNumFaixas()+"\n"; 
+				"\nNumero de faixas do CD: "+getNumFaixas()+"\n"
+						+ "Codigo de barras: "+super.getCodBarras()+"\n"; 
 	}
 	
 	public void imprimir() {
