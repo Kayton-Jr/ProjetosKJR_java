@@ -46,12 +46,12 @@ public class Loja{
 		i=0;
 		while(i<todosProd.size()){
 			if(i!=j){
-				if(i!=comp2 && j!=comp1){
+				if(i!=comp2 || j!=comp1){
 					if(todosProd.get(i).verifCodBar(todosProd.get(i).getCodBarras(), todosProd.get(j).getCodBarras())){
 						System.out.println(todosProd.get(i).getNomeProd()+"\n"
 								+ todosProd.get(j).getNomeProd()+"\n\n");
-					i=comp1;
-					j=comp2;
+					comp1=i;
+					comp2=j;
 					}
 				}
 			}
