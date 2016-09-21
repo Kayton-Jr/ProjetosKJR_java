@@ -1,11 +1,11 @@
 package Lista3;
 
 
-public class CDs extends Produto{
+public class CD extends Produto{
 	
 	private int numFaixas;
 	
-	public CDs(int numFaixas, String nome, String numCod){
+	public CD(int numFaixas, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
 		this.numFaixas = numFaixas;

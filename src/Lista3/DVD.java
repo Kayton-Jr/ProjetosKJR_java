@@ -1,11 +1,11 @@
 package Lista3;
 
 
-public class DVDs extends Produto{
+public class DVD extends Produto{
 	
 	private float duracao;
 	
-	public DVDs(float dur, String nome, String numCod){
+	public DVD(float dur, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
 		this.duracao = dur;

@@ -1,11 +1,11 @@
 package Lista3;
 
 
-public class Livros extends Produto{
+public class Livro extends Produto{
 	
 	private String autor;
 	
-	public Livros(String autor, String nome, String numCod){
+	public Livro(String autor, String nome, String numCod){
 		super();
 		super.setNomeProd(nome);
 		this.autor = autor;
