@@ -5,11 +5,19 @@ public class Produto{
 	
 	private String nomeProd;
 	private float precoProd;
+	private String CodBarras;
 	
 	public Produto(){
 		
 	}
 	
+	public String getCodBarras(){
+		return CodBarras;
+	}
+	public void setCodBarras(String codBarras){
+		CodBarras = codBarras;
+	}
+
 	public String getNomeProd() {
 		return nomeProd;
 	}
@@ -22,11 +30,13 @@ public class Produto{
 	public void setPrecoProd(float precoProd) {
 		this.precoProd = precoProd;
 	}
-	
-//	public void carrinho(int qtd, Livros[] qtdL, DVDs[] qtdD, CDs[] qtdC){
-//		System.out.println(Livros[].class.toString());
-//		System.out.println(DVDs[].class.toString());
-//		System.out.println(CDs[].class.toString());
-//
-//	}
+	public boolean verifCodBar(String cod1, String cod2){
+		if(cod1.equals(cod2)){
+			System.out.println("Produtos com o mesmo Codigo de barras");
+			return true;
+		}
+		else
+			return false;
+		
+	}
 }
