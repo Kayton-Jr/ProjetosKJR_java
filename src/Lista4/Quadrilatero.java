@@ -2,7 +2,7 @@ package Lista4;
 
 public class Quadrilatero extends FormaGeometrica{/**Acesse esse site para fazer a implementacao correta da classe
  													http://objetoseducacionais2.mec.gov.br/bitstream/handle/mec/10396/geo0402.htm */
-	
+//por motivo de forcas maiores esse programa somente calculara a area de quadrilateros contendo todos os lados iguais	
 	private double lado2, lado3, lado4;
 	
 	public Quadrilatero(double l1, double l2, double l3, double l4){
@@ -14,12 +14,15 @@ public class Quadrilatero extends FormaGeometrica{/**Acesse esse site para fazer
 	
 	@Override
 	public double calArea() {
-		return 0;
+		if(super.getLado() == this.lado2 && this.lado2 == this.lado3 && this.lado3 == this.lado4)
+			return super.getLado()*super.getLado();//caso de todos os lados iguais
+		else 
+			return 0;
 	}
 	
 	@Override
 	public double calPerim() {
-		return 0;
+		return super.getLado()+this.lado2+this.lado3+this.lado4;
 	}
 
 	public double getLado2() {

@@ -39,6 +39,13 @@ public class Triangulo extends FormaGeometrica{
 		this.lado3 = lado3;
 	}
 	
-	
+	public boolean existe() {
+		if(Math.abs(this.lado2-this.lado3) < super.getLado() && super.getLado() < this.lado2 + this.lado3 &&
+				Math.abs(super.getLado()-this.lado3) < this.lado2 && this.lado2 < super.getLado() + this.lado3 &&
+				Math.abs(super.getLado()-this.lado2) < this.lado3 && this.lado3 < super.getLado() + this.lado2)
+			return true;
+		else
+			return false;
+	}
 
 }

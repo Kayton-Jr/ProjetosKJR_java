@@ -3,7 +3,7 @@ package Lista4;
 public abstract class FormaGeometrica {
 	
 	private double lado;
-	private double pi = 3.14;
+	final double pi = 3.14;
 	
 	public FormaGeometrica(double l1){
 		setLado(l1);
