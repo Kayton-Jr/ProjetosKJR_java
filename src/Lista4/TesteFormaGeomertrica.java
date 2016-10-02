@@ -15,9 +15,12 @@ public class TesteFormaGeomertrica {
 		
 		System.out.println("O perimetro do teu quadrilatero eh: "+qd.calPerim()+"u");
 		
-		if(qd.calArea() == 0)
-			System.out.println("Desculpa cara, disse q só funcionaria se fosse todos os lados iguais");
-		else
+		while(qd.calArea() == 0){
+			System.out.println("Desculpa cara, disse q soh funcionaria se fosse todos os lados iguais");
+			System.out.println("Digite os lados novamente");
+			qd = new Quadrilatero(input.nextDouble(), input.nextDouble(), input.nextDouble(), input.nextDouble());
+		}
+		if(qd.calArea() != 0)
 			System.out.println("A area do teu quadrilatero eh: "+qd.calArea()+"u.a");
 		
 		System.out.println("\n\n");
@@ -27,7 +30,11 @@ public class TesteFormaGeomertrica {
 		
 		if(!tri.existe())
 			System.out.println("Esses lados digitados nao formam um triangulo");
-		else{
+		while(!tri.existe()){
+			System.out.println("Digita os lados de um triangulo qualquer");
+			tri = new Triangulo(input.nextDouble(), input.nextDouble(), input.nextDouble());
+		}
+		if(tri.existe()){
 			System.out.println("O perimetro do teu triangulo eh: "+tri.calPerim()+"u");
 			System.out.println("A area do teu triangulo eh: "+tri.calArea()+"u.a");
 		}
