@@ -26,6 +26,14 @@ public class Empresa extends Pessoa{
 	public String getEmpregados(){
 		return empregados.toString();
 	}
+	
+	public int getEmpregadosCod(int i) {
+		return empregados.get(i).getCodigo();
+	}
+	
+	public int getQtdEmpregados() {
+		return empregados.size();
+	}
 
 	
 	public void adcionarEmpregado(Empregado empregados){
