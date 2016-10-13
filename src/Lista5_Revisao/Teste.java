@@ -20,7 +20,7 @@ public class Teste{
 		ge.setDataNascimento(new Data(17,01,2000));
 		ge.setCodigo(123);
 		
-		//cadastrando o empregado na empresa
+		//Cadastrando o empregado na empresa
 		zas.adcionarEmpregado(ge);
 		
 		//Setando os clientes
@@ -41,7 +41,7 @@ public class Teste{
 		k.setCpfCnpj("70434872180");
 		k.setCodigo(654);
 		
-		//cadastrando 2 clientes na empresa
+		//Cadastrando 2 clientes na empresa
 		zas.adcionarCliente(mar);
 		zas.adcionarCliente(k);
 		
