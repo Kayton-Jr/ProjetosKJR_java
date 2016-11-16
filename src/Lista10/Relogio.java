@@ -21,6 +21,9 @@ public class Relogio implements Runnable {
 				contH.contaHora();
 				contM.setMin(0);
 			}
+			if(contH.getHoras()==24){
+				contH.setHoras(0);
+			}
 			
 			System.out.println(contH.getHoras()+":"+contM.getMin()+":"+contS.getSeg());
 			
@@ -32,12 +35,4 @@ public class Relogio implements Runnable {
 		}
 		
 	}
-	
-	public static void main(String args[]){
-		
-		Thread threadRel = new Thread(new Relogio());
-		
-		threadRel.start();
-	}
-
 }
