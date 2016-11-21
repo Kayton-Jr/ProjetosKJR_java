@@ -12,8 +12,9 @@ public class Consumidor implements Runnable{
 
 	@Override
 	public void run() {
-		while(i<=qtd){
-		des.retirar();
+		while(i<qtd){
+			i++;
+			des.retirar();
 		}
 	}
 }

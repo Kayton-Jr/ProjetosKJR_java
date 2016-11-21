@@ -1,11 +1,11 @@
-package Lista10;
+package Lista11;
 
-public class Produtor implements Runnable {
+public class Consumidor implements Runnable{
 	
 	private int qtd, i=0;
 	private Deposito des;
 	
-	public Produtor(Deposito des, int qtd){
+	public Consumidor(Deposito des, int qtd){
 		this.des = des;
 		this.qtd = qtd;
 	}
@@ -14,7 +14,7 @@ public class Produtor implements Runnable {
 	public void run() {
 		while(i<qtd){
 			i++;
-			des.colocar();
+			des.retirar();
 		}
 	}
 }
