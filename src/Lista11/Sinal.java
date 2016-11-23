@@ -11,26 +11,26 @@ public class Sinal {
 	public synchronized void acendeVerde(){
 		while(true){
 			if(fVerde){
-				System.out.println(verde+cont);
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				cont++;
-				if(cont==30){
-					cont=0;
-					fVerde=false;
-					fAmarelo=true;
-					notifyAll();
+				for(cont=0;cont<30;cont++){
+					System.out.println(verde+cont);
 					try {
-						wait();
+						Thread.sleep(100);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
+				if(cont==30){
+					fVerde=false;
+					fAmarelo=true;
+					notifyAll();
+				}
+			}
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 	}
@@ -45,12 +45,13 @@ public class Sinal {
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					}
-					if(cont==5){
-						fAmarelo=false;
-						fVermelho=true;
-						notifyAll();
-					}
+					}					
+				}
+				
+				if(cont==5){
+					fAmarelo=false;
+					fVermelho=true;
+					notifyAll();
 				}
 			}
 			try {
@@ -73,11 +74,11 @@ public class Sinal {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					if(cont==45){
-						fVermelho=false;
-						fVerde=true;
-						notifyAll();
-					}
+				}
+				if(cont==45){
+					fVermelho=false;
+					fVerde=true;
+					notifyAll();
 				}
 			}
 			try {
