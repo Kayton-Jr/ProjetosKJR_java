@@ -1,16 +1,18 @@
 package lista12_DP;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Log {
 	
-	private static String acao;
+	private String acao;
 	private Date data = new Date();
-	private static long date;
+	private String date;
 	private static final Log instance = new Log();
 
 	private Log(){
-		date = data.getTime();
+		SimpleDateFormat conv = new SimpleDateFormat("dd/MM/yyyy"+"-"+"HH:mm:ss");
+		date = conv.format(data.getTime());
 		
 	}
 	
@@ -18,8 +20,8 @@ public class Log {
 		return instance;
 	}
 	
-	public static void retornaLog(){
+	public void retornaLog(String texto){
 		System.out.println(date);
-		System.out.println();
+		System.out.println(texto);
 	}
 }
