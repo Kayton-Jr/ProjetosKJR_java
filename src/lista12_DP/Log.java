@@ -8,7 +8,7 @@ public class Log {
 	private Date data = new Date();
 	private static long date; 
 	private static final Log instance = new Log();
-	
+
 	private Log(){
 		date = data.getTime();
 		
