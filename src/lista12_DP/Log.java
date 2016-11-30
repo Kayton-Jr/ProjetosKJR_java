@@ -6,7 +6,7 @@ public class Log {
 	
 	private static String acao;
 	private Date data = new Date();
-	private static long date;
+	private static long date; 
 	private static final Log instance = new Log();
 	
 	private Log(){
