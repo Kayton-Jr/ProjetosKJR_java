@@ -15,9 +15,20 @@ public class CadastrarConta {
 		
 	}
 	
-	public void cadastrar(Conta conta){
+	public void cadastrar(){
 		
-		File arq = new File("C:\\texto.txt");
+		String chave = null;
+		chave.isEmpty();
+		
+		JOptionPane.showMessageDialog(null, "Informe os dados para cadastrar a conta");
+		
+		Conta c1 = new Conta(Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o numero da conta")),
+				Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o tipo da conta")),
+				JOptionPane.showInputDialog(null, "Informe o nome do proprietario da conta"),
+				Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o saldo da conta")),
+				Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o limite da conta")));
+		
+		File arq = new File("C:\\Arq\\texto.txt");
 		
 		OutputStream os;
 		try {
@@ -29,13 +40,7 @@ public class CadastrarConta {
 			e.printStackTrace();
 		}
 		
-		JOptionPane.showMessageDialog(null, "Informe os dados para cadastrar a conta");
 		
-		new Conta(Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o numero da conta")),
-				Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o tipo da conta")),
-				JOptionPane.showInputDialog(null, "Informe o nome do proprietario da conta"),
-				Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o saldo da conta")),
-				Double.parseDouble(JOptionPane.showInputDialog(null, "Informe o limite da conta")));
 	}
 
 }
